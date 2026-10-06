@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite the paper below."
+title: "Crossover from Discrete to Continuous Quantum Geometry: code, data and figures"
+authors:
+  - family-names: Chen
+    given-names: Ruqing
+    affiliation: "GUT Geoservice Inc., Montreal"
+    email: ruqing@hotmail.com
+repository-code: "https://github.com/Ruqing1963/quantum-geometry-crossover"
+doi: 10.5281/zenodo.23195881
+date-released: 2026-10-06
+license: MIT
+keywords:
+  - quantum gravity
+  - spectral dimension
+  - dimensional reduction
+  - heat kernel
+  - noncommutative geometry
+  - spectral triples
+  - lattice Dirac operator
+  - Sierpinski gasket
+preferred-citation:
+  type: article
+  title: "Crossover from Discrete to Continuous Quantum Geometry: Running Spectral Dimensions, Noncommutative Spectral Triples, and Critical Phase Transitions"
+  authors:
+    - family-names: Chen
+      given-names: Ruqing
+      affiliation: "GUT Geoservice Inc., Montreal"
+  year: 2026
+  doi: 10.5281/zenodo.23195881

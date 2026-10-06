@@ -1,0 +1,21 @@
+[A] 64x64 lattice: max |numerical - analytic eigenvalue| = 1.0e-13
+    infinite lattice: d_s max = 2.4355 at tau = 0.841 (overshoots d = 2)
+    d_s(tau=1e-4) = 8.00e-04 (bounded spectrum => d_s <= 2 tau lambda_max = 1.60e-03)
+    finite-size drop: d_s(tau=1e4) = 0.000; max |FD - 2 tau <lambda>| = 1.5e-03
+[B] Sierpinski gasket level 7: N = 3282, d_H = ln3/ln2 = 1.5850, d_s theory = 2ln3/ln5 = 1.3652
+    finite-size scale 1/lambda_1 = 4325
+    mean d_s over three periods: tau in [1,125] 1.3868, [2,250] 1.3568, [3,375] 1.3470
+    oscillation peak-to-peak on [2,250]: 0.169; dominant frequency after detrending 1.02 cycles per log_5(tau) unit (expected 1)
+[C] d=4, E = k^2(1+l^2 k^2), l = 10.0, cutoff pi: d_s(1e-7) = 0.0010, plateau (1e-2..1) = 2.034, d_s(1e4) = 3.894, d_s(1e6) = 3.9988
+    closed form (no cutoff) vs cutoff numerics for tau >= 1e-2: max diff = 1.0e-04
+    E = k^2 with cutoff: d_s(1e-7) = 0.0000, max = 4.000, d_s(1e6) = 4.0000
+    parabolic-cylinder identity check: integral = 0.311663006230, formula = 0.311663006227
+[D] N=   16: sup resolvent error  Hodge-Dirac = 1.43e-01   naive = 9.92e-01
+[D] N=   64: sup resolvent error  Hodge-Dirac = 3.23e-02   naive = 1.00e+00
+[D] N=  256: sup resolvent error  Hodge-Dirac = 7.87e-03   naive = 1.00e+00
+[D] N= 1024: sup resolvent error  Hodge-Dirac = 1.96e-03   naive = 1.00e+00
+[D] N= 4096: sup resolvent error  Hodge-Dirac = 4.89e-04   naive = 1.00e+00
+[E] n=  50: lower bound / Euclidean at 0,15,30,45 deg = 1.0000, 1.0103, 1.0184, 1.0186   (l1/Euclidean = 1.000, 1.219, 1.367, 1.414)
+[E] n= 200: lower bound / Euclidean at 0,15,30,45 deg = 1.0000, 1.0036, 1.0062, 1.0063   (l1/Euclidean = 1.000, 1.226, 1.365, 1.414)
+[E] n= 800: lower bound / Euclidean at 0,15,30,45 deg = 1.0000, 1.0011, 1.0020, 1.0020   (l1/Euclidean = 1.000, 1.224, 1.366, 1.414)
+figures written to figures/, data to data/
