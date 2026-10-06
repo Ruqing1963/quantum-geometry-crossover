@@ -48,7 +48,7 @@ gasket this gives $d_s=2\ln3/\ln5$, with log-periodic oscillations of period $\l
 On the noncommutative side, we prove that the lattice Hodge--Dirac operator $d+d^*$ on the torus $T^d$
 converges to the continuum Hodge--Dirac operator in norm-resolvent sense with error $O(a)$, whereas the naive
 symmetric-difference Dirac operator does not converge, because of fermion doubling. For the incidence Dirac
-operator of a graph, the Connes distance is bounded between $a\,d_{\rm hop}/\sqrt{\deg}$ and $a\,d_{\rm hop}$. On
+operator of a graph, the Connes distance is bounded between $a\,d_{\rm hop}/\sqrt{\deg^+}$ (with $\deg^+$ the maximal in-degree) and $a\,d_{\rm hop}$. On
 $\ZZ^d$ the hop metric tends to the $\ell^1$ metric, not the Euclidean one, whereas a linear test function
 shows that $d_C\ge|p-q|_2$ exactly, for every lattice spacing.
 
@@ -257,8 +257,10 @@ the heat-kernel counterpart of the complex dimensions studied in~\cite{ADT,Chen2
 on fractals~\cite{Kigami,Strichartz}. The renormalised graph energies converge to a self-similar Dirichlet form,
 and the graph Laplacians, rescaled by $5^m$ up to a normalisation constant, converge to the Laplacian with respect
 to the self-similar measure. Its spectrum is obtained by spectral decimation~\cite{FukushimaShima}. Kigami and
-Lapidus proved Weyl-type asymptotics $N(\lambda)\asymp\lambda^{d_s/2}$ with $d_s=2\ln3/\ln5$, using renewal theory; in the
-lattice case the prefactor is periodic in $\ln\lambda$ and does not converge~\cite{KigamiLapidus}. The log-periodic heat
+Lapidus proved Weyl-type asymptotics $N(\lambda)\asymp\lambda^{d_s/2}$ with $d_s=2\ln3/\ln5$, using renewal theory. In the
+arithmetic (``lattice'') self-similar case, where the logarithms of the contraction ratios are commensurable,
+the prefactor is periodic in $\ln\lambda$ and does not converge~\cite{KigamiLapidus}. Here ``lattice'' is the
+renewal-theoretic term and is unrelated to the spatial lattices of Section~\ref{sec:equi}. The log-periodic heat
 kernel is the Laplace-transform counterpart of this statement.
 
 \paragraph{Numerical test.} We diagonalised the graph Laplacian of the level-7 gasket ($N=3282$ vertices). The
@@ -368,7 +370,9 @@ lattice points $p,q$ and every $a>0$.
 \begin{proof}
 Let $\mathbf n=(p-q)/|p-q|_2$ and $f(x)=\mathbf n\cdot x$. On every edge along $e_i$, $\nabla_ef=n_i$. Each vertex has exactly one
 incoming edge in each direction, so by Proposition~\ref{prop:connes}, $\|[D,f]\|^2=\sum_in_i^2=1$. Hence $f$ is admissible
-and $d_C(p,q)\ge f(p)-f(q)=|p-q|_2$.
+and $d_C(p,q)\ge f(p)-f(q)=|p-q|_2$. If the algebra is required to consist of bounded functions, replace $f$ by
+its clamp $\min\{\max\{f,f(q)\},f(p)\}$. Clamping does not increase any edge difference, so the constraint still
+holds, and the values at $p$ and $q$ are unchanged.
 \end{proof}
 The supremum defining $d_C$ allows a different test function for each pair of points, and a linear function
 already gives the Euclidean distance. On $\ZZ^2$, with edges oriented along $+x$ and $+y$, the upwind recursion
@@ -383,7 +387,14 @@ and the excess decreases as the grid is refined.
 For the incidence Dirac operator on $a\ZZ^d$, $d_C(p,q)\to|p-q|_2$ as $a\to0$.
 \end{conjecture}
 \noindent By Proposition~\ref{prop:connes_euclid} the conjecture is equivalent to
-$\limsup_{a\to0}d_C(p,q)\le|p-q|_2$. An upper bound sharper than $\ell^1$ is missing.
+$\limsup_{a\to0}d_C(p,q)\le|p-q|_2$. An upper bound sharper than $\ell^1$ is missing. A natural route is to extend
+admissible lattice functions to Lipschitz functions on $\RR^d$, by multilinear interpolation or mollification, and to
+use the continuum bound. The difficulty is that admissibility constrains gradients vertex by vertex. Near a
+corner of a lattice cube, the edges that determine the different components of the interpolated gradient end at
+\emph{different} vertices, so each component is only bounded by $1$ and the interpolant can have $|\nabla F|$ up to
+$\sqrt d$. This reproduces only the $\ell^1$-type bound. The same vertex-wise decoupling is what allows
+$d_C>|p-q|_2$ at finite resolution, so an improvement must show that such local excesses do not accumulate along
+paths as $a\to0$.
 
 %=====================================================================
 \begin{figure}[t]
