@@ -274,7 +274,7 @@ def main():
         sel = RE[:, 0] == n
         bx[2].plot(RE[sel, 1], RE[sel, 2], mk + "-", label=f"lower bound, n={n}")
     bx[2].plot(RE[RE[:, 0] == 800, 1], RE[RE[:, 0] == 800, 3], "k--", label="l1 / Euclidean")
-    bx[2].axhline(1, color="grey", lw=0.6)
+    bx[2].axhline(1, color="grey", lw=1.2, label="linear test function (exact bound)")
     bx[2].set_xlabel("angle (deg)"); bx[2].set_ylabel("distance / Euclidean")
     bx[2].set_title("Connes distance on the square lattice"); bx[2].legend(fontsize=8)
     savefig(fig2, "dirac_and_connes")

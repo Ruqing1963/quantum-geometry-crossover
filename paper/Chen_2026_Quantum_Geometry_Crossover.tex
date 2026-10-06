@@ -31,9 +31,9 @@ Running Spectral Dimensions, Noncommutative Spectral Triples,\\ and Critical Pha
 \begin{abstract}
 The spectral dimension $d_s(\tau)=-2\,\dd\ln P/\dd\ln\tau$ of a diffusion process is widely used to diagnose
 dimensional reduction in quantum gravity. We show that it is exactly twice an equipartition count:
-$d_s(\tau)=2\tau\langle\lambda\rangle_\tau$, the Gibbs average of the Laplacian at inverse temperature $\tau$. Two consequences are
-not always appreciated. First, any discretisation with a bounded spectrum gives $d_s\to0$ as $\tau\to0$, an
-artefact of the cutoff rather than a feature of quantum geometry. Second, a finite graph gives $d_s\to0$ as
+$d_s(\tau)=2\tau\langle\lambda\rangle_\tau$, the Gibbs average of the Laplacian at inverse temperature $\tau$. Two consequences make precise how cutoff effects are separated from physical scaling. First, any
+discretisation with a bounded spectrum gives $d_s\to0$ as $\tau\to0$, so physical values must be read from
+scaling plateaus between the cutoff and finite-volume regimes. Second, a finite graph gives $d_s\to0$ as
 $\tau\to\infty$.
 
 For the hypercubic lattice we obtain the exact running dimension
@@ -49,8 +49,8 @@ On the noncommutative side, we prove that the lattice Hodge--Dirac operator $d+d
 converges to the continuum Hodge--Dirac operator in norm-resolvent sense with error $O(a)$, whereas the naive
 symmetric-difference Dirac operator does not converge, because of fermion doubling. For the incidence Dirac
 operator of a graph, the Connes distance is bounded between $a\,d_{\rm hop}/\sqrt{\deg}$ and $a\,d_{\rm hop}$. On
-$\ZZ^d$ the hop metric tends to the $\ell^1$ metric, not the Euclidean one; nevertheless, numerical lower bounds
-on the Connes distance converge to the Euclidean distance.
+$\ZZ^d$ the hop metric tends to the $\ell^1$ metric, not the Euclidean one, whereas a linear test function
+shows that $d_C\ge|p-q|_2$ exactly, for every lattice spacing.
 
 All statements are checked numerically by exact diagonalisation.
 \end{abstract}
@@ -92,12 +92,15 @@ anomalous scaling of the kinetic operator at fixed volume scaling. Self-similar 
 oscillations~\cite{ADT}.
 \item \emph{Spectral triples} (Section~\ref{sec:ncg}). We prove $O(a)$ norm-resolvent convergence of the lattice
 Hodge--Dirac operator on $T^d$, show that the naive lattice Dirac operator fails to converge because of fermion
-doubling~\cite{NielsenNinomiya}, and bound the Connes distance on graphs.
+doubling~\cite{NielsenNinomiya}, bound the Connes distance on graphs, and prove $d_C\ge|p-q|_2$ on
+$a\ZZ^d$.
 \end{enumerate}
 
-We also correct three statements that are sometimes made about this crossover. A vanishing ultraviolet
-spectral dimension is generic for any discretisation and carries no information about quantum gravity. The hop
-metric of a hypercubic lattice converges to the $\ell^1$ metric, not to the Riemannian distance. Lattice corrections
+We also make three points precise. A vanishing ultraviolet spectral dimension is generic for any
+discretisation with a bounded spectrum. This is well known in the CDT, spin-foam and tensor-model literature,
+where physical values are read from scaling plateaus or from continuum limits taken at fixed physical scale;
+Corollary~\ref{cor:limits} formalises that separation. The hop metric of a hypercubic lattice converges to the
+$\ell^1$ metric, not to the Riemannian distance. Lattice corrections
 to heat-kernel coefficients are non-universal ultraviolet terms, not conformal anomalies.
 
 This is the fourth paper of the author's programme of scale-dependent analysis (``pan-scale analytics''),
@@ -144,10 +147,11 @@ numerator, which is at most $(N-1)\lambda_{\max}e^{-\tau\lambda_1}/N$. (iii) In 
 of a power-law density gives $\langle\lambda\rangle_\tau=\delta/(2\tau)$, with corrections from the edges of the window
 suppressed exponentially or by powers of $\tau\lambda_\pm$.
 \end{proof}
-Part (i) has a direct implication for quantum gravity. A vanishing spectral dimension at the shortest scales
-is produced by \emph{any} regularisation with a bounded spectrum, so it cannot by itself be evidence of new
-physics. Physically meaningful ultraviolet values, such as $d_s\approx2$, must appear as plateaus at
-intermediate $\tau$, well above the cutoff scale.
+Part (i) states in exact form what is familiar from lattice studies of quantum gravity: a vanishing spectral
+dimension at the shortest scales is produced by any regularisation with a bounded spectrum. Physically
+meaningful ultraviolet values, such as $d_s\approx2$, are therefore identified as plateaus at intermediate $\tau$,
+well above the cutoff scale and below the finite-volume scale of part (ii), or through continuum limits taken
+at fixed physical scale.
 
 \subsection{The hypercubic lattice}
 \begin{proposition}[Exact lattice running]
@@ -171,6 +175,14 @@ the product form. Then $\frac{\dd}{\dd x}\ln[e^{-x}I_0(x)]=I_1/I_0-1$, and~\eqre
 forms follow from $I_\nu(x)=\frac{e^x}{\sqrt{2\pi x}}\big(1-\frac{4\nu^2-1}{8x}+\dots\big)$~\cite{DLMF}, which gives
 $1-I_1/I_0=\frac{1}{2x}+\frac{1}{8x^2}+O(x^{-3})$. The maximum was located numerically from~\eqref{eq:lattice}.
 \end{proof}
+\begin{remark}[Origin of the overshoot]
+Per dimension and with $a=1$, the lattice density of states is $\rho_{\rm lat}(\lambda)=1/(\pi\sqrt{\lambda(4-\lambda)})$ on
+$(0,4)$, while the continuum has $\rho_{\rm cont}(\lambda)=1/(2\pi\sqrt\lambda)$. The ratio
+$\rho_{\rm lat}/\rho_{\rm cont}=2/\sqrt{4-\lambda}$ is at least $1$ and diverges at the zone boundary $\lambda=4$, where the group
+velocity vanishes (a Van Hove singularity). Relative to the continuum, the lattice therefore places extra weight
+at large $\lambda$. For $\tau\sim a^2$ the Gibbs mean $\langle\lambda\rangle_\tau$ exceeds the equipartition value $d/(2\tau)$, so $d_s>d$,
+until the bounded spectrum takes over for $\tau\ll a^2$.
+\end{remark}
 The $a^2/\tau$ term is a non-universal ultraviolet correction to the heat-kernel coefficients. It is not a
 conformal anomaly: the anomaly is controlled by the coefficient $a_{d/2}$ of the Seeley--DeWitt expansion,
 which is a curvature invariant and vanishes on a flat torus.
@@ -202,6 +214,15 @@ with $\beta=\tau\ell^2$ and $\gamma=\tau$. The limits follow from $\sqrt\pi\,s\,
 $s\to\infty$, and from $\to0$ as $s\to0$. For a pure power law $E\propto k^\alpha$, Theorem~\ref{thm:equi} gives
 $\langle E\rangle_\tau=d/(\alpha\tau)$.
 \end{proof}
+\begin{remark}[Ghost pole and the meaning of $P$]
+In Lorentzian signature the transverse-traceless propagator of quadratic gravity decomposes as
+$\frac{1}{k^2(1+\ell^2k^2)}=\frac{1}{k^2}-\frac{1}{k^2+\ell^{-2}}$. The second term has negative residue and describes a
+massive spin-2 ghost~\cite{Stelle}. Proposition~\ref{prop:stelle} uses $E=k^2(1+\ell^2k^2)$ only as an effective
+Euclidean dispersion that models the ultraviolet scaling of the spectral density, and it says nothing about
+unitarity. Moreover, the heat kernel of a fourth-order operator is not positive in position space, so $P(\tau)$
+is then a spectral trace rather than a return probability. This is one reason why different definitions of
+diffusion can lead to different spectral dimensions~\cite{CES}.
+\end{remark}
 Combining~\eqref{eq:erfc} with a momentum cutoff $|k|\le\pi/a$ gives three regimes:
 $d_s\to0$ for $\tau\ll a^4/\ell^2$, $d_s\approx2$ in between, and $d_s\to4$ for $\tau\gg\ell^2$. Numerically, with $\ell=10a$, the cutoff
 result agrees with~\eqref{eq:erfc} to $10^{-4}$ for $\tau\ge10^{-2}a^2$. It equals $0.001$ at $\tau=10^{-7}a^2$, averages $2.03$
@@ -232,6 +253,14 @@ Spectral decimation rescales eigenvalues by $5$ under the geometric scaling by $
 $P(\tau)=\tau^{-d_s/2}G(\ln\tau)$ with $G$ periodic of period $\ln5$, and $d_s(\tau)$ oscillates log-periodically. This is
 the heat-kernel counterpart of the complex dimensions studied in~\cite{ADT,Chen2026_holo}.
 
+\paragraph{Analysis on fractals.} The graph Laplacians used here approximate the Laplacian of Kigami's analysis
+on fractals~\cite{Kigami,Strichartz}. The renormalised graph energies converge to a self-similar Dirichlet form,
+and the graph Laplacians, rescaled by $5^m$ up to a normalisation constant, converge to the Laplacian with respect
+to the self-similar measure. Its spectrum is obtained by spectral decimation~\cite{FukushimaShima}. Kigami and
+Lapidus proved Weyl-type asymptotics $N(\lambda)\asymp\lambda^{d_s/2}$ with $d_s=2\ln3/\ln5$, using renewal theory; in the
+lattice case the prefactor is periodic in $\ln\lambda$ and does not converge~\cite{KigamiLapidus}. The log-periodic heat
+kernel is the Laplace-transform counterpart of this statement.
+
 \paragraph{Numerical test.} We diagonalised the graph Laplacian of the level-7 gasket ($N=3282$ vertices). The
 finite-size scale is $1/\lambda_1\simeq4.3\times10^3$. Averaged over exactly three periods, $d_s$ is $1.387$, $1.357$
 and $1.347$ for $\tau\in[1,125]$, $[2,250]$ and $[3,375]$, bracketing $2\ln3/\ln5$. The drift reflects the
@@ -252,6 +281,16 @@ with scale-dependent couplings. On flat space its transverse-traceless kinetic o
 $k^2(1+\ell^2k^2)$ with $\ell^2\propto\beta G$~\cite{Stelle}, which is the dispersion of Proposition~\ref{prop:stelle}. We stress that
 \eqref{eq:Gamma} is a truncation motivated by these properties. We do not derive it from the CDT transition,
 whose universality class remains open.
+
+\begin{remark}[Isotropy versus Lifshitz anisotropy]
+CDT imposes a preferred time foliation. It has therefore been proposed that its continuum limit near the
+second-order transition is described by an anisotropic Ho\v{r}ava--Lifshitz theory~\cite{Horava,AGJJL}. In such a
+theory only spatial derivatives are of higher order, with dynamical exponent $z=3$ in the ultraviolet, while
+time derivatives remain of second order, which avoids Ostrogradsky ghosts. The isotropic
+functional~\eqref{eq:Gamma} should therefore be read as a toy truncation. The anisotropic dispersion
+$\omega^2\sim k^2+k^6/M^4$ gives $d_s=1+3/z=2$ in the ultraviolet~\cite{Horava}, the same value as the isotropic $k^4$
+case, so the spectral dimension alone does not distinguish the two.
+\end{remark}
 
 %=====================================================================
 \section{Noncommutative spectral triples: from lattice to continuum}
@@ -277,7 +316,8 @@ Laplacian. Hence $D_a$ has eigenvalues $\pm s_a(k)$, with
 $s_a(k)^2=\sum_i\frac{4}{a^2}\sin^2\frac{k_ia}{2}$ for $k\in B_a$, while $D$ has eigenvalues $\pm|k|$ with the same
 multiplicities. For $|k_ia|\le\pi$ we have $\frac2\pi|k_i|\le\frac2a|\sin\frac{k_ia}2|\le|k_i|$ and
 $0\le|k_i|-\frac2a|\sin\frac{k_ia}2|\le a^2|k_i|^3/24$. Therefore $\frac2\pi|k|\le s_a(k)\le|k|$ and
-$|k|-s_a(k)=\frac{|k|^2-s_a^2}{|k|+s_a}\le a^2|k|^3/12$. Take $z=iy$ for simplicity. For a mode in $B_a$,
+$|k|-s_a(k)=\frac{|k|^2-s_a^2}{|k|+s_a}\le a^2|k|^3/12$. Take $z=iy$ for simplicity. For a mode $k\neq0$ in $B_a$ (the zero mode contributes nothing, since
+$s_a(0)=|0|=0$),
 \begin{equation}
 \Big|\frac{1}{\pm s_a-z}-\frac{1}{\pm|k|-z}\Big|=\frac{\big||k|-s_a\big|}{|s_a\mp z|\,\big||k|\mp z\big|}\le\frac{a^2|k|^3/12}{s_a|k|}
 \le\frac{\pi a^2|k|}{24}\le\frac{\pi^2\sqrt d}{24}\,a ,
@@ -318,16 +358,32 @@ $f=a\,d_{\rm hop}(p,\cdot)/\sqrt{\deg^+}$ is admissible. In one dimension $\deg^
 
 On $a\ZZ^d$, $a\,d_{\rm hop}$ converges to the $\ell^1$ distance, not to the Euclidean distance; the ratio is $\sqrt2$
 along a diagonal of $\ZZ^2$. The hop metric therefore does not deform into the Riemannian geodesic distance. The
-Connes distance is subtler. On $\ZZ^2$, with edges oriented along $+x$ and $+y$, the upwind recursion
+Connes distance behaves differently.
+
+\begin{proposition}[Euclidean lower bound on $a\ZZ^d$]
+\label{prop:connes_euclid}
+For the incidence Dirac operator on $a\ZZ^d$, with edges oriented along $+e_i$, one has $d_C(p,q)\ge|p-q|_2$ for all
+lattice points $p,q$ and every $a>0$.
+\end{proposition}
+\begin{proof}
+Let $\mathbf n=(p-q)/|p-q|_2$ and $f(x)=\mathbf n\cdot x$. On every edge along $e_i$, $\nabla_ef=n_i$. Each vertex has exactly one
+incoming edge in each direction, so by Proposition~\ref{prop:connes}, $\|[D,f]\|^2=\sum_in_i^2=1$. Hence $f$ is admissible
+and $d_C(p,q)\ge f(p)-f(q)=|p-q|_2$.
+\end{proof}
+The supremum defining $d_C$ allows a different test function for each pair of points, and a linear function
+already gives the Euclidean distance. On $\ZZ^2$, with edges oriented along $+x$ and $+y$, the upwind recursion
 $f(v)=\frac{A+B}{2}+\frac12\sqrt{2-(A-B)^2}$, where $A$ and $B$ are the values at the two predecessors, defines an
-admissible $f$. It is a monotone discretisation of the eikonal equation $|\nabla f|=1$ and gives a lower bound on
-$d_C$. Relative to the Euclidean distance, this bound equals $1.0186$, $1.0063$ and $1.0020$ at $45^\circ$ for grids of
-$50$, $200$ and $800$ steps, and exactly $1$ along the axes (Fig.~\ref{fig:dirac}, right).
+admissible $f$. It is a monotone discretisation of the eikonal equation $|\nabla f|=1$ and gives another lower bound on $d_C$.
+Relative to the Euclidean distance, this bound equals $1.0186$, $1.0063$ and $1.0020$ at $45^\circ$ for grids of $50$,
+$200$ and $800$ steps, and exactly $1$ along the axes (Fig.~\ref{fig:dirac}, right). At finite resolution it is
+therefore \emph{strictly} larger than the bound of Proposition~\ref{prop:connes_euclid}, so $d_C>|p-q|_2$ off the axes,
+and the excess decreases as the grid is refined.
 
 \begin{conjecture}
 For the incidence Dirac operator on $a\ZZ^d$, $d_C(p,q)\to|p-q|_2$ as $a\to0$.
 \end{conjecture}
-\noindent The lower bound converges to $|p-q|_2$. An upper bound sharper than $\ell^1$ is missing.
+\noindent By Proposition~\ref{prop:connes_euclid} the conjecture is equivalent to
+$\limsup_{a\to0}d_C(p,q)\le|p-q|_2$. An upper bound sharper than $\ell^1$ is missing.
 
 %=====================================================================
 \begin{figure}[t]
@@ -346,8 +402,9 @@ $d=4$ with $E=k^2(1+\ell^2k^2)$, $\ell=10a$, and cutoff $|k|\le\pi/a$ (green), t
 \includegraphics[width=\textwidth]{dirac_and_connes}
 \caption{Left: log-periodic oscillation of $d_s$ on the Sierpinski gasket (period $\ln5$). Middle: norm-resolvent
 error at $z=i$ on the circle for the lattice Hodge--Dirac operator (convergent, $O(a)$) and the naive
-symmetric-difference operator (non-convergent, fermion doubling). Right: lower bound on the Connes distance
-on the square lattice relative to the Euclidean distance, compared with the $\ell^1$ distance.}
+symmetric-difference operator (non-convergent, fermion doubling). Right: upwind lower bound on the Connes
+distance on the square lattice relative to the Euclidean distance, compared with the $\ell^1$ distance; the linear
+test function of Proposition~\ref{prop:connes_euclid} gives exactly $1$ (grey line).}
 \label{fig:dirac}
 \end{figure}
 
@@ -362,8 +419,11 @@ ultraviolet values of $d_s$ should be read from plateaus well above the cutoff s
 scale.
 \item Theorem~\ref{thm:resolvent} concerns flat tori. Extending norm-resolvent convergence to curved manifolds
 and random triangulations, as in CDT, and controlling fermion doubling there, are open problems.
-\item The conjectured Euclidean limit of the Connes distance on $\ZZ^d$ is supported by lower bounds only.
-\item The functional~\eqref{eq:Gamma} is a truncation, not a derivation from the CDT transition.
+\item For the Connes distance on $\ZZ^d$ we prove $d_C\ge|p-q|_2$. The conjectured Euclidean limit requires a
+matching upper bound.
+\item The functional~\eqref{eq:Gamma} is a truncation, not a derivation from the CDT transition. It is isotropic,
+whereas CDT has a preferred foliation, and its higher-derivative pole is a ghost. Accordingly,
+Proposition~\ref{prop:stelle} is used only as an effective spectral model.
 \item \emph{Connections within the series.} Log-periodic oscillations of $d_s$ on self-similar graphs are the
 heat-kernel counterpart of the complex dimensions of~\cite{Chen2026_holo}. The equipartition form of $d_s$ is an
 instance of the thermodynamic formalism used for entanglement spectra in~\cite{Chen2026_multi}. Whether a
@@ -415,5 +475,10 @@ vertex; values are reported at the lattice point on each ray at the edge of the 
 \bibitem{Chen2026_holo} R.~Chen, ``Holographic entanglement of fractal regions: Complex dimensions, non-local counterterms and cosmic-brane multifractality'' (2026), doi:10.5281/zenodo.23189575.
 \bibitem{Chen2026_multi} R.~Chen, ``Multifractal large deviations in quantum entanglement: Ideal Fermi-gas mapping, Markov tensor cascades, and quartic Casimir symmetry'' (2026), doi:10.5281/zenodo.23193512.
 \bibitem{Chen2026_chaitin} R.~Chen, ``Uncomputable fractal dimensions, Kolmogorov complexity cascades, and the Chaitin barrier in physical systems'' (2026), doi:10.5281/zenodo.23194419.
+\bibitem{AGJJL} J.~Ambj{\o}rn, A.~G{\"o}rlich, S.~Jordan, J.~Jurkiewicz, R.~Loll, ``CDT meets Ho\v{r}ava--Lifshitz gravity'', Phys.\ Lett.\ B 690 (2010) 413--419, arXiv:1002.3298.
+\bibitem{Kigami} J.~Kigami, \emph{Analysis on Fractals}, Cambridge Tracts in Mathematics 143, Cambridge University Press (2001).
+\bibitem{Strichartz} R.~S.~Strichartz, \emph{Differential Equations on Fractals: A Tutorial}, Princeton University Press (2006).
+\bibitem{FukushimaShima} M.~Fukushima, T.~Shima, ``On a spectral analysis for the Sierpi\'nski gasket'', Potential Anal.\ 1 (1992) 1--35.
+\bibitem{KigamiLapidus} J.~Kigami, M.~L.~Lapidus, ``Weyl's problem for the spectral distribution of Laplacians on p.c.f.\ self-similar fractals'', Commun.\ Math.\ Phys.\ 158 (1993) 93--125.
 \end{thebibliography}
 \end{document}
