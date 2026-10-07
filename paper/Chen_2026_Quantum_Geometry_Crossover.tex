@@ -346,8 +346,11 @@ $\nabla_ef=(f(e^+)-f(e^-))/a$, and
 In one dimension, with consistent orientation, $d_C(p,q)=|p-q|$ exactly.
 \end{proposition}
 \begin{proof}
-$[\partial,f]g(e)=\nabla_ef\,g(e^+)$ is a weighted map from vertices to edges, and its norm is
-$\max_v(\sum_{e^+=v}|\nabla_ef|^2)^{1/2}$. The same holds for $[\partial^*,f]$, which is minus its adjoint. Hence
+$[\partial,f]g(e)=\nabla_ef\,g(e^+)$ is a weighted map from vertices to edges. Its norm is
+\begin{equation*}
+\|[\partial,f]\|=\max_v\Bigl(\sum_{e^+=v}|\nabla_ef|^2\Bigr)^{1/2},
+\end{equation*}
+and the same holds for $[\partial^*,f]$, which is minus its adjoint. Hence
 $\|[D,f]\|\le1$ implies $|\nabla_ef|\le1$ on every edge, so $d_C\le a\,d_{\rm hop}$. Conversely,
 $f=a\,d_{\rm hop}(p,\cdot)/\sqrt{\deg^+}$ is admissible. In one dimension $\deg^+=1$.
 \end{proof}
