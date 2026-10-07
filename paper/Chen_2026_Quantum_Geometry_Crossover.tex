@@ -103,12 +103,6 @@ Corollary~\ref{cor:limits} formalises that separation. The hop metric of a hyper
 $\ell^1$ metric, not to the Riemannian distance. Lattice corrections
 to heat-kernel coefficients are non-universal ultraviolet terms, not conformal anomalies.
 
-This is the fourth paper of the author's programme of scale-dependent analysis (``pan-scale analytics''),
-which also covers complex dimensions in holographic entanglement~\cite{Chen2026_holo}, multifractal
-entanglement spectra~\cite{Chen2026_multi}, and algorithmic complexity under
-scaling~\cite{Chen2026_chaitin}, and is continued by a thermodynamic analysis of scale~\cite{Chen2026_st}.
-Connections are discussed in Section~\ref{sec:discussion}.
-
 %=====================================================================
 \section{The spectral dimension as an equipartition count}
 \label{sec:equi}
@@ -129,8 +123,7 @@ are the eigenvalues of $\Delta$.
 Differentiate under the integral: $-\tau\,\dd\ln P/\dd\tau=\tau\int\lambda e^{-\tau\lambda}\dd\rho/\int e^{-\tau\lambda}\dd\rho$.
 \end{proof}
 For a continuum Laplacian, $\rho(\lambda)\propto\lambda^{d/2-1}$, and each of the $d$ quadratic degrees of freedom contributes
-$1/(2\tau)$ to $\langle\lambda\rangle_\tau$, which gives $d_s=d$. This is equipartition. The same thermodynamic reading of
-heat-kernel and R\'enyi quantities underlies the companion paper~\cite{Chen2026_multi}.
+$1/(2\tau)$ to $\langle\lambda\rangle_\tau$, which gives $d_s=d$. This is equipartition.
 
 \begin{corollary}
 \label{cor:limits}
@@ -252,7 +245,7 @@ volume growth.
 For the Sierpinski gasket, $d_H=\ln3/\ln2$ and $d_w=\ln5/\ln2$, so $d_s=2\ln3/\ln5\simeq1.3652$~\cite{RammalToulouse}.
 Spectral decimation rescales eigenvalues by $5$ under the geometric scaling by $2$. As a result
 $P(\tau)=\tau^{-d_s/2}G(\ln\tau)$ with $G$ periodic of period $\ln5$, and $d_s(\tau)$ oscillates log-periodically. This is
-the heat-kernel counterpart of the complex dimensions studied in~\cite{ADT,Chen2026_holo}.
+the heat-kernel counterpart of the complex dimensions studied in~\cite{ADT}.
 
 \paragraph{Analysis on fractals.} The graph Laplacians used here approximate the Laplacian of Kigami's analysis
 on fractals~\cite{Kigami,Strichartz}. The renormalised graph energies converge to a self-similar Dirichlet form,
@@ -436,14 +429,8 @@ matching upper bound.
 \item The functional~\eqref{eq:Gamma} is a truncation, not a derivation from the CDT transition. It is isotropic,
 whereas CDT has a preferred foliation, and its higher-derivative pole is a ghost. Accordingly,
 Proposition~\ref{prop:stelle} is used only as an effective spectral model.
-\item \emph{Connections within the series.} Log-periodic oscillations of $d_s$ on self-similar graphs are the
-heat-kernel counterpart of the complex dimensions of~\cite{Chen2026_holo}. The equipartition form of $d_s$ is an
-instance of the thermodynamic formalism used for entanglement spectra in~\cite{Chen2026_multi}. Its heat-capacity
-counterpart, $C=\tau^2\mathrm{Var}(\lambda)=\tfrac12d_s-\tfrac12\,\dd d_s/\dd\ln\tau$, turns the overshoot of $d_s$ on
-$\ZZ^d$ into a Schottky-type anomaly~\cite{Chen2026_st}. Whether a
-computable graph can have an uncomputable spectral dimension, in analogy with the uncomputable fractal
-dimensions of~\cite{Chen2026_chaitin}, is left open. For connectivity, the analogous question is settled
-in~\cite{Chen2026_fcu}: connectivity of computable fractal limit sets is $\Pi^0_1$-complete.
+\item Whether a computable graph can have an uncomputable spectral dimension, in analogy with the uncomputable
+fractal dimensions of~\cite{Chen2026_chaitin}, is left open.
 \end{enumerate}
 
 \section*{Data and code availability}
@@ -487,11 +474,7 @@ vertex; values are reported at the lattice point on each ray at the edge of the 
 \bibitem{AJJL} J.~Ambj{\o}rn, S.~Jordan, J.~Jurkiewicz, R.~Loll, ``A second-order phase transition in CDT'', Phys.\ Rev.\ Lett.\ 107 (2011) 211303, arXiv:1108.3932.
 \bibitem{DLMF} NIST Digital Library of Mathematical Functions, \S10.40, \url{https://dlmf.nist.gov/10.40}.
 \bibitem{GR} I.~S.~Gradshteyn, I.~M.~Ryzhik, \emph{Table of Integrals, Series, and Products}, 7th ed., Academic Press (2007), formula 3.462.1.
-\bibitem{Chen2026_holo} R.~Chen, ``Holographic entanglement of fractal regions: Complex dimensions, non-local counterterms and cosmic-brane multifractality'' (2026), doi:10.5281/zenodo.23189575.
-\bibitem{Chen2026_multi} R.~Chen, ``Multifractal large deviations in quantum entanglement: Ideal Fermi-gas mapping, Markov tensor cascades, and quartic Casimir symmetry'' (2026), doi:10.5281/zenodo.23193512.
 \bibitem{Chen2026_chaitin} R.~Chen, ``Uncomputable fractal dimensions, Kolmogorov complexity cascades, and the Chaitin barrier in physical systems'' (2026), doi:10.5281/zenodo.23194419.
-\bibitem{Chen2026_st} R.~Chen, ``Thermodynamics of scale: Entropic $c$-functions, data processing, spectral thermodynamics, fluctuation relations, and the arrow of time'' (2026), doi:10.5281/zenodo.23199122.
-\bibitem{Chen2026_fcu} R.~Chen, ``Undecidable connectivity of computable fractal limit sets: $\Pi^0_1$-completeness, an $\Omega$-comb, and incompleteness thresholds'' (2026), doi:10.5281/zenodo.23199984.
 \bibitem{AGJJL} J.~Ambj{\o}rn, A.~G{\"o}rlich, S.~Jordan, J.~Jurkiewicz, R.~Loll, ``CDT meets Ho\v{r}ava--Lifshitz gravity'', Phys.\ Lett.\ B 690 (2010) 413--419, arXiv:1002.3298.
 \bibitem{Kigami} J.~Kigami, \emph{Analysis on Fractals}, Cambridge Tracts in Mathematics 143, Cambridge University Press (2001).
 \bibitem{Strichartz} R.~S.~Strichartz, \emph{Differential Equations on Fractals: A Tutorial}, Princeton University Press (2006).
